@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-background">
+        <div class="banner-content">
+          <h2>Tạo khóa học</h2>
+          <p>Trang chủ > Tạo khóa học</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="item-left">
+        <div class="contact-info">
+          <div class="information">
+
+          <div class="background-image">
+            <img class="background" src="/images/overlay-bg.jpg" alt="Avatar" />
+            <img
+              class="avatar"
+              src="/images/avatar-mentor-1.jpg"
+              alt="Avatar"
+              class="avatar"
+            />
+          </div>
+
+          <div class="basic-info">
+            <div class="info-name">
+              <h4>Mentor Cường</h4>
+              <p>Mentor</p>
+            </div>
+            <div class="contact-buttons">
+              <a href="https://facebook.com">
+                <div class="contact-button">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+              </a>
+              <a href="https://instagram.com">
+                <div class="contact-button">
+                  <i class="fab fa-instagram"></i>
+                </div>
+              </a>
+              <a href="https://twitter.com">
+                <div class="contact-button">
+                  <i class="fab fa-twitter" style="color: white;"></i>
+                </div>
+              </a>              
+            </div>
+            
+            <div class="Details">
+              <i
+                class="fas fa-male"
+                style="color: orange; font-size: 25px; margin-top: 20px"
+              ></i>
+              <p>27/01/2001</p>
+              <p>
+                <i class="fas fa-map-marker-alt" style="color: orange"></i> Tân
+                Bình, Tp. Hồ Chí Minh
+              </p>
+              <p>
+                <i class="fas fa-envelope" style="color: orange"></i>
+                mentor@gmail.com
+              </p>
+              <p>
+                <i class="fas fa-phone" style="color: orange"></i> 0946005077
+              </p>
+              <p>
+                Số dư hiện tại: <span style="color: orange">300,000 BS</span>
+              </p>
+            </div>
+            <div class="Control-buttons">
+              <a href="#">Chỉnh sửa thông tin</a>
+              <a href="#">Quản lý ví tiền</a>
+              <a href="#">Rút tiền</a>
+              <a href="#">Danh sách khóa học</a>
+            </div>
+          </div>
+         </div>
+      </div>
+      <div class="recent-activities">
+        <div class="recent-active">
+          <p class="activity-title">Các hoạt động gần đây</p>
+          <p>Đã đăng ký khóa học ReactJS Basic</p>
+          <p class="activity-date" style="color: orange;">01/01/2023</p>
+          <hr>
+          <p>Đã nhận được 100 BS từ việc chia sẻ khóa học</p>
+          <p class="activity-date" style="color: orange;">01/01/2023</p>
+          <hr>
+      </div>
+     </div>
+    </div>
+    <div class="right">
+      <div class="course-info">
+        <div class="item item1">Thông tin khóa học<i style="float: right; color:blue;" class="fas fa-chevron-down"></i></div>
+        <div class="info-container1">
+          <form id="course-form">
+            <div>
+              <label for="course-name">Tên khóa học:</label>
+              <input class="input-text" type="text" id="course-name" name="course-name" required minlength="3" pattern="[^\d]+">
+              <span class="error-message" style="color: red; display: none;">Tên khóa học không hợp lệ</span>
+            </div> 
+            
+         
+         
+            <div class="radio-choose">
+              <label>Trình độ:</label>
+              <input type="radio" id="beginner" name="course-level" value="Beginner">
+              <label for="beginner">Beginner</label>
+              <input type="radio" id="intermediate" name="course-level" value="intermediate">
+              <label for="intermediate">Intermediate</label>
+              <input type="radio" id="advanced" name="course-level" value="advanced">
+              <label for="advanced">Advanced</label>
+              <input type="radio" id="expert" name="course-level" value="expert">
+              <label for="advanced">Expert</label>
+            </div>
+            <br>
+            <div class="price-input">
+              <label for="course-price">Giá tiền:</label>
+              <input class="input-text" type="text" id="course-price" name="course-price" oninput="javascript: if (this.value.length > 0) { this.value = this.value.replace(/[^0-9.]/g,''); if (this.value.indexOf('.') >= 0) { this.value = this.value.replace(/(\d)(?=(\d{3})+\.)/g, '$1,'); } else { this.value = this.value.replace(/(\d)(?=(\d{3})+$)/g, '$1,'); } }">
+            </div>
+            
+            
+            <br>
+            <br>
+            <div class="show-image">
+              <div class="image-preview">
+                <img id="image-preview" src="/images/upload-img.jpg" alt="Ảnh gốc">
+              </div>
+            </div>
+            
+            <div class="upload-image">
+              <label class="image-up">Hình ảnh: </label>
+                <input type="file" id="image-upload-input" accept="image/*">
+                <button id="image-remove" class="btn btn-remove">Xóa ảnh</button>
+    
+            </div>
+    
+            <br>
+            <div class="select-field">
+              <label>Lĩnh vực:</label>
+              <select class="input-choose" id="course-field" name="course-field">
+                <option value="programming">Lập trình</option>
+                <option value="design">Thiết kế</option>
+                <option value="business">Kinh doanh</option>
+              </select>
+            </div>            
+
+            <br>
+            <div class="course-type-selection">
+              <label>Hình thức khóa học:</label><br>
+            <select class="input-choose" id="course-type" name="course-type">
+              <option value="online">Trực tuyến</option>
+              <option value="offline">Offline</option>
+            </select>
+            </div>
+            <br>
+            <div>
+              <label for="course-meet-link">Link Google Meet:</label><br>
+            <input class="input-text" type="text" id="course-meet-link" name="course-meet-link">
+            <span id="meet-link-error-msg" style="color:red;"></span>
+            <br>
+            <br>
+            </div>
+            <div>
+              <label for="course-min-students">Số lượng học viên:</label><br>
+              <div class="min-max">
+              Min: <input class="number-user" type="number" id="course-min-students" name="course-min-students" min="0" max="15" value="0">
+              Max: <input class="number-user" type="number" id="course-max-students" name="course-max-students" min="0" max="15" value="15">
+            </div>
+            <span id="students-range-error-msg" style="color:red;"></span>
+            <br>
+            </div>
+            <div>
+              <label>Tags:</label><br>
+            <input class="input-text" type="text" placeholder="">
+            <br>
+            <br>
+            </div>
+            <div class="info-learn">
+              <label for="course-description">Mô tả khóa học:</label>
+              <br>
+              <div style="position: relative;">
+                <div class="mota">
+                  <div class="nhap-mota">
+                    <textarea class="text-mota" id="course-description" name="course-description" rows="10" cols="80" maxlength="200"></textarea>
+                  </div>
+                  <div style="position: absolute; bottom: 5px; right: 35px; font-size: 12px;">
+                    <span id="char-count">0</span>/200
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <script>
+          const item1 = document.querySelector('.item1');
+          const infoContainer1 = document.querySelector('.info-container1');
+          item1.addEventListener('click', function() {
+            infoContainer1.classList.toggle('hidden');
+          });
+        </script>
+        <div class="item item2">Lộ trình khóa học<i style="float: right; color:blue;" class="fas fa-chevron-down"></i></div>
+        <div class="info-container2">
+          <form id="course-form">
+            <div class="soanthao">
+              
+              <div style="position: relative;">
+                <span id="course-name-preview"></span>
+                <textarea id="lotrinh" name="course-description" rows="10" cols="80" maxlength="200"></textarea>
+                <button class="save-btn">Lưu</button>
+              </div>
+              <div id="char-count"></div>
+            </div>
+          </form>
+        </div>
+        <script>
+          const courseNameInput = document.getElementById('course-name');
+          const errorMessage = document.querySelector('.error-message');
+          const previewSpan = document.getElementById('course-name-preview');
+        
+          courseNameInput.addEventListener('input', () => {
+            if (courseNameInput.validity.valueMissing) {
+              errorMessage.style.display = 'none';
+            } else if (courseNameInput.validity.patternMismatch || courseNameInput.validity.tooShort) {
+              errorMessage.style.display = 'inline-block';
+            } else {
+              errorMessage.style.display = 'none';
+              const content = courseNameInput.value;
+              previewSpan.textContent = content;
+            }
+          });
+        </script>
+        <script>
+          const item2 = document.querySelector('.item2');
+          const infoContainer2 = document.querySelector('.info-container2');
+          item2.addEventListener('click', function() {
+            infoContainer2.classList.toggle('hidden');
+          });
+        </script>
+        <div class="item item3">Thời gian khóa học<i style="float: right; color:blue;" class="fas fa-chevron-down"></i></div>
+        <br>
+        <a href="#">Tạo khóa học</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script rel="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+    <script>
+      //--------TRÌNH SOẠN THẢO-------- //
+      CKEDITOR.replace( 'lotrinh' ); 
+    </script>
+    <script>
+      //---------ĐẾM SỐ KÝ TỰ TRONG Ô--------//
+      const courseDescriptionInput = document.getElementById('course-description');//Lấy đối tượng HTML input với id là "course-description" và lưu trữ vào biến courseDescriptionInput.
+      const charCountSpan = document.getElementById('char-count');//lưu trữ vào biến charCountSpan.
+      
+      courseDescriptionInput.addEventListener('input', function() { //Thêm một event listener cho input với id "course-description". Event listener này sẽ được kích hoạt khi giá trị của input thay đổi.
+        const charCount = courseDescriptionInput.value.length; //Lấy độ dài của giá trị trong input và lưu trữ vào biến charCount.
+        charCountSpan.textContent = charCount;//Gán giá trị của charCount vào textContent của span với id là "char-count", hiển thị số lượng ký tự đã nhập cho người dùng.
+      });
+      </script>
+     <script>
+      // Đảm bảo rằng min và max không âm.
+      // Đảm bảo rằng min luôn nhỏ hơn max.
+      // Max Không được nhỏ hơn 1.
+      // Chỉ cho phép tăng min đến khi nó nhỏ hơn max.
+      // Nếu nhập min lớn hơn max, thì giá trị min sẽ tự động được thay đổi thành giá trị lớn nhất nhưng vẫn nhỏ hơn max.
+      // Nếu nhập max nhỏ hơn min, thì giá trị max sẽ tự động được thay đổi thành giá trị nhỏ nhất của max mà vẫn lớn hơn min.
+      
+      const minInput = document.getElementById('course-min-students');
+      const maxInput = document.getElementById('course-max-students');
+    
+      function validateMinMax() {
+        if (parseInt(minInput.value) < 0) { //Nếu nhập input min nhỏ hơn 0 sẽ đặt thành 0
+          minInput.value = 0;
+        }
+        if (parseInt(maxInput.value) < 1) { //Nếu nhập input max nhỏ hơn 1 sẽ đặt thành 1
+          maxInput.value = 1;
+        }
+        if (parseInt(minInput.value) >= parseInt(maxInput.value)) { // Nếu nhập min lớn hơn hoặc bằng max, min sẽ được đặt thành giá trị của max -1.
+          minInput.value = parseInt(maxInput.value) - 1;
+        }
+        if (parseInt(maxInput.value) <= parseInt(minInput.value)) { // Nếu nhập max nhỏ hơn hoặc bằng min, max sẽ được đặt thành giá trị của min +1.
+          maxInput.value = parseInt(minInput.value) + 1;
+        }
+      }
+      // Đăng ký sự kiện Change cho Min, khi nhập vào input và kết thúc nhập, thì hàm validateMinMax(); sẽ được gọi để kiểm tra và thay đổi min theo điều kiện
+      minInput.addEventListener('change', () => {
+        validateMinMax();
+      });
+      // Đăng ký sự kiện Change cho Min và Max, khi nhập vào input và kết thúc nhập, thì hàm validateMinMax(); sẽ được gọi để kiểm tra và thay đổi max theo điều kiện
+      maxInput.addEventListener('change', () => {
+        validateMinMax();
+      });
+    </script>    
+</html>
+<script>
+//-------------THÔNG BÁO KHI NHẬP SAI ĐỊNH DẠNG GOOGLE MEET LINK--------//
+var meetLinkInput = document.getElementById("course-meet-link"); // Sử dụng hàm getElementByld để hiển thị thông báo lỗi
+var meetLinkErrorMsg = document.getElementById("meet-link-error-msg");
+// thêm một sự kiện blur vào input element để kiểm tra tính hợp lệ của liên kết người dùng nhập vào
+meetLinkInput.addEventListener("blur", function() {
+  var meetLinkRegex = /^https:\/\/meet\.google\.com\/\w{3}-\w{4}-\w{3}$/; //để kiểm tra tính hợp lệ của liên kết Google Meet
+  if (!meetLinkRegex.test(meetLinkInput.value)) {
+    meetLinkErrorMsg.innerHTML = "Vui lòng nhập một liên kết hợp lệ của Google Meet (https://meet.google.com/.., meet.google.com/...)";
+    meetLinkErrorMsg.style.marginLeft = "20px";
+  } else {
+    meetLinkErrorMsg.innerHTML = "";
+  }
+});
+
+
+
+//---------------- UPLOAD ẢNH ----------------//
+const imagePreview = document.getElementById("image-preview");
+const imageUploadInput = document.getElementById("image-upload-input");
+const imageRemoveBtn = document.getElementById("image-remove");
+
+// Thay đổi ảnh gốc khi upload hình mới
+imageUploadInput.addEventListener("change", function () { //cho phép người dùng chọn tệp hình ảnh
+  const file = this.files[0];// lấy tệp đầu tiên trong danh sách được người dùng chọn
+  if (file) { //kiểm tra xem tệp đã được chọn hay chưa. nếu đã được chọn
+    const reader = new FileReader();//tạo một đối tượng FileReader và gán nó cho biến reader.
+    reader.onload = function (event) {
+      imagePreview.src = event.target.result; // thuộc tính result chứa đường dẫn URL đến tệp hình ảnh
+    };
+    reader.readAsDataURL(file); //đường dẫn URL đến tệp hình ảnh được gán cho thuộc tính src
+  }
+});
+// Xóa ảnh và hiển thị lại ảnh gốc
+imageRemoveBtn.addEventListener("click", function () { // sự kiện click cho button Khi button được click, function callback sẽ chạy
+  imagePreview.src = "/images/upload-img.jpg"; // callback sẽ cập nhật src về đường dẫn mặc định "/images/upload-img.jpg"
+  imageUploadInput.value = null; // xóa đi ảnh đã được chọn
+});
+</script>

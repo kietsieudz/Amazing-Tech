@@ -1,0 +1,563 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/*----------------------- CSS BANNER------------------ */
+.banner {
+  position: relative;
+  max-width: 100%;
+  height: 30vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/banner-2.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #001cee;
+  opacity: 0.5;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h2 {
+  color: #ff6500;
+  font-size: 36px;
+  margin: 0;
+}
+
+p {
+  padding: 20px 0 0 0;
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+
+/*----------------CSS CONTAINER----------------*/
+
+/* CSS AVATAR */
+.container {
+    padding-top: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+  
+.item-left {
+    width: 35%;
+    max-width: calc(0.35 * 65%);
+    position: relative;
+}
+  .contact-info {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .recent-activities {
+    margin-top: 10px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .background-image {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar {
+    position: absolute;
+    border: 1px;
+    bottom: -10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85px;
+    height: 95px;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+/* CSS BASIC-INFO */
+
+.basic-info .info-name h4{
+    text-align: center;
+    padding-top: 20px;
+}
+    .basic-info .info-name p {
+        text-align: center;
+        padding-top: 5px;
+        color: #000;
+    }
+
+/* CSS BUTTON CONTACT */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.contact-buttons a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.contact-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button i {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 3px;
+}
+
+.contact-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background-color: #ff6500;
+    border-radius: 2px;
+    color: #FFF;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+    .contact-button:hover {
+    background-color: #ff9225;
+    }
+
+/* CSS DETAIL */
+.Details {
+    text-align: center;
+
+  }
+  .Details p{
+    color: #000;
+  }
+  .orange-icon {
+    color: #ff6500;
+    font-size: 5em;
+    margin-right: 10px;
+  }
+  
+
+/* CSS CONTROL-BUTTON */
+.Control-buttons {
+  height: 180px;
+}
+.Control-buttons a {
+    display: block;
+    width: 90%;
+    background-color: #ff6500;
+    padding: 10px;
+    margin: 5px auto;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .Control-buttons a:hover {
+    background-color: #ff9225;
+  }
+  
+/* CSS recent-activities */
+.recent-active {
+  height: 230px;
+}
+  .recent-active {
+    width: 90%;
+    margin-left: 20px;
+  }
+  .recent-active p {
+    margin: 0;
+    color: #000;
+  }  
+  .activity-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .activity-date {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+/* CSS COURSE-INFO */
+.item-right {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  max-width: calc(0.65 * 65%);
+  position: relative;
+}
+.course-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+  .course-info a {
+    display: block;
+    width: 92%;
+    background-color: #ff6500;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+.item {
+  width: 645px;
+  padding: 10px;
+  color: rgb(48, 48, 48);
+  text-align: left;
+  margin-top: 10px;
+  cursor: pointer;
+  flex-grow: 1;
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-bottom: 1px solid rgb(158, 158, 158);
+}
+
+.item1 {
+  background-color: #eeeeee;
+}
+
+.item2 {
+  background-color: #eeeeee;
+}
+
+.item3 {
+  background-color: #eeeeee;
+}
+
+.item:hover {
+  background-color: #f3f3f3;
+}
+
+
+
+/* CSS INFO-CONTAINER */
+.info-container1,
+.info-container2 {
+  border: 1px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  width: 95%;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: none;
+}
+.info-container1 input,
+.info-container2 input{
+  margin-top: 10px;
+}
+.hidden {
+  display: block;
+}
+  #course-form {
+    margin-top: 20px;
+  }
+ 
+  
+  .info-container1 label,
+.info-container2 label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.error-message {
+  display: inline-block;
+  color: red;
+  margin-left: 20px;
+}
+
+  
+  .info-container1 input[type="radio"],
+  .info-container2 input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .select-field select {
+    margin-top: 10px;
+  }
+  .course-type-selection select {
+    margin-top: 10px;
+  }
+
+.input-text {
+  width: 90%;
+  margin-left: 20px;
+  margin-right: 15px;
+  padding: 5px;
+}
+
+.input-choose {
+  width: 92%;
+  margin-left: 20px;
+  margin-right: 15px;
+  padding: 5px;
+}
+.min-max {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+/* CSS IMAGE UPLOAD */
+.show-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 25px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.upload-image {
+  padding: 40px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 25px;
+}
+/* .upload-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+} */
+.upload-image input{
+  margin-left: 50px;
+}
+.upload-image label{
+  float: left;
+}
+
+.image-preview {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  padding: 8px 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-remove {
+  background-color: #ff6347;
+}
+
+/* CSS ITEM 2 */
+.soanthao {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.mota {
+  margin-top: 10px;
+  width: 100%;
+  height: 220px;
+}
+.nhap-mota {
+  width: 92%;
+  margin-left: 20px;
+  background-color: rgb(219, 219, 219);
+}
+.text-mota {
+  width: 92%;
+  margin: 20px 20px 20px 20px;
+}
+.save-btn {
+  bottom: 0;
+  right: 0;
+  float: right;
+  background-color: #0011ff;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  /* CSS BANNER */
+  .banner {
+    height: 20vh;
+  }
+  .banner-content {
+    height: auto;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 12px;
+  }
+  
+  /* CSS CONTAINER */
+  .container {
+    flex-direction: column;
+  }
+  .item-left, .item-right {
+    width: 100%;
+    max-width: 100%;
+  }
+  .avatar {
+    width: 70px;
+    height: 80px;
+  }
+  
+  /* CSS CONTROL-BUTTON */
+  .Control-buttons {
+    height: auto;
+  }
+  
+  /* CSS RECENT-ACTIVITIES */
+  .recent-active {
+    height: auto;
+  }
+  .item-right {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    max-width: calc(0.65 * 65%);
+    position: relative;
+  }
+  .course-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+  }
+    .course-info a {
+      display: block;
+      width: 90%;
+      background-color: #ff6500;
+      padding: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  .item {
+    width: 435px;
+    padding: 10px;
+    color: rgb(48, 48, 48);
+    text-align: left;
+    margin-top: 10px;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-bottom: 1px solid rgb(158, 158, 158);
+  }
+  
+  .item1 {
+    background-color: #eeeeee;
+  }
+  
+  .item2 {
+    background-color: #eeeeee;
+  }
+  
+  .item3 {
+    background-color: #eeeeee;
+  }
+  
+  .item:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .upload-image {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 25px;
+  }
+
+  .upload-image input{
+    margin-left: 10px;
+  }
+  .upload-image label{
+    float: left;
+  }
+
+  .btn {
+    border: none;
+    margin-left: 20px;
+    border-radius: 3px;
+    padding: 6px 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btn-remove {
+    background-color: #ff6347;
+  }
+}
+
